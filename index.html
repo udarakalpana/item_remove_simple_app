@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+
+        <ul id="parent">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+            <li>Item 7</li>
+        </ul>
+
+        <button id="removeNextElement">Remove Next Element</button>
+        <button id="removePreviousElement">Remove Previous Element</button>
+        
+        <script>
+            
+            // Function belong to Remove next element
+            const removeNextBtn =  document.getElementById('removeNextElement')
+
+            removeNextBtn.addEventListener('click', () => {
+
+                // get parent node who is ul element
+                const parentNode = document.getElementById('parent')
+
+                // get parent first child
+                const firstListElement = parentNode.firstElementChild
+
+                // Remove next element
+                firstListElement.nextElementSibling.remove()
+            })
+
+
+            // Function belong to remove previous element
+            const removePreviousBtn = document.getElementById('removePreviousElement')
+
+            removePreviousElement.addEventListener('click', () => {
+                // get parent node who is ul element
+                const parentNode = document.getElementById('parent')
+
+                // get parent last child
+                const lastListElement = parentNode.lastElementChild
+
+                lastListElement.previousElementSibling.remove()
+
+            })
+
+        </script>
+    </body>
+</html>
